@@ -1,0 +1,28 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/admin/test">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center title">Modifica el Test</h1>
+</div>
+    <a class="block text-center" href="/admin/test/{{test._id}}/questions">Modificar preguntas</a>
+
+<div class="form">
+
+    <form class="container-mk column-mk content-center" action="/admin/test/{{test._id}}" method="POST">
+
+        <label for="title">Nombre del test:</label>
+        <input type="text" name="title" id="title" value="{{test.title}}">
+        <label for="subject">Tema del test:</label>
+        <input type="text" name="subject" id="subject" value="{{test.subject}}">
+        <label for="numValid">Número de respuestas válidas:</label>
+        <input type="text" name="numValid" id="numValid" value="{{test.numValid}}">
+
+        <button class="btn-mk btn-color btn-create" type="submit">Modificar</button>
+
+    </form>
+
+    {{#if errorMessage}}
+        <p class="error">{{errorMessage}}</p>
+    {{/if}}
+
+</div>

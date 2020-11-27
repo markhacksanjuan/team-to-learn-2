@@ -1,0 +1,34 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/admin/test/{{test._id}}">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center title">Test: {{test.title}}</h1>
+</div>
+
+<h3 class="text-center">{{test.subject}}</h3>
+
+<div class="container-mk column-mk align-center">
+{{#each test.questions}}
+    <div class="container-mk column-mk card">
+        <h3 class="text-center">{{question}}</h3>
+        {{#each validAnswers}}
+            <div class="container-mk row-mk answer">
+                <p class="valid">{{this}}</p>
+            </div>
+        {{/each}}
+        {{#each wrongAnswers}}
+            <div class="container-mk row-mk answer">
+                 <p class="wrong">{{this}}</p>
+            </div>
+        {{/each}}
+        <a href="/admin/question/{{_id}}/delete">
+            <img class="trash-sign-question trash rotate45" src="/images/trash-sign.jpg" alt="trash-sign">
+        </a>
+        <a href="/admin/question/{{_id}}/edit">
+            <img class="edit-sign-question rotate" src="/images/edit-sign.jpg" alt="edit-sign">
+        </a>
+    </div>
+{{/each}}
+</div>
+
+

@@ -1,0 +1,17 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/admin">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center">Usuarios NO VERIFICADOS de Team to Learn</h1>
+</div>
+<a class="block text-center" href="/admin/not-verified/delete">ELIMINAR TODOS LOS USUARIOS NO VERIFICADOS</a>
+
+<div class="container-mk row-mk align-center content-center wrap">
+{{#each users}}
+    <div class="container-mk column-mk card">
+            <h4 class="text-center">{{name}} {{lastName}}</h4>
+            <p class="text-center">{{email}}</p>
+            <p class="text-center">Verificado: <strong>{{isVerified}}</strong></p>
+    </div>
+{{/each}}
+</div>

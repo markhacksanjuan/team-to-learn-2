@@ -1,0 +1,41 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/test/{{question.testId}}">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center title">Editar pregunta</h1>
+</div>
+
+<div class="form form-sm">
+    <form class="container-mk column-mk content-center form-sm" action="/question/{{question._id}}/edit" method="POST">
+        <div class="container-mk column-mk content-center">
+            <label for="question">Pregunta:</label>
+            <input type="text" name="question" value="{{question.question}}">
+        </div>
+
+        <div class="container-mk column-mk content-center">
+            <label for="validAnswers">Respuesta válida:</label>
+            {{#each question.validAnswers}}
+                <input type="text" name="validAnswers" value="{{this}}">
+            {{/each}}
+            <div id="valids"></div>
+        </div>
+
+        <div id="wrongs" class="container-mk column-mk content-center">
+            <label for="wrongAnswers">Respuestas incorrectas:</label>
+            {{#each question.wrongAnswers}}
+                <input type="text" name="wrongAnswers" value="{{this}}">
+            {{/each}}
+        </div>
+
+        <div class="container-mk column-mk content-center align-center">
+            <button id="add-wrong-answer" class="add-question container row align-center content-center" onclick="addWrongQuestion()">
+                <div class="container row content-start align-center">
+                    <img class="add-sign-question" src="/images/add-sign-5.png" alt="add-sign">
+                    <span id="new-valid">Nueva respuesta</span>
+                </div>
+            </button>
+        </div>
+        <button class="btn-mk btn-color btn-create" type="submit">Modificar Pregunta</button>
+    </form>
+
+</div>

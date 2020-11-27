@@ -1,0 +1,17 @@
+<h1 class="text-center">Nueva contraseña</h1>
+
+<div class="form">
+
+    <form class="container-mk column-mk content-center" action="/auth/resetPwd/{{email}}/new" method="POST">
+
+        <label for="password">Introduce tu nueva contraseña:</label>
+        <input type="password" name="password" id="password" autofocus>
+
+        <button class="btn-mk btn-color btn-create" type="submit">Enviar</button>
+
+    </form>
+    {{#if errorMessage}}
+        <p class="error">{{errorMessage}}</p>
+    {{/if}}
+
+</div>

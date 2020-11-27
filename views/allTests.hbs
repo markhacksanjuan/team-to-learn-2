@@ -1,0 +1,21 @@
+<h1 id="h1-search" class="text-center">¿Qué test estás buscando?</h1>
+<div id="select-test-1" class="container-mk row-mk content-evenly wrap">
+    {{#each subjectsArr}}
+        <button class="btn-mk btn-color btn-create" onclick="axiosGetName()">{{this}}</button>
+    {{/each}}
+</div>
+<div id="select-test-2" class="container-mk column-mk content-evenly wrap form">
+    <form class="container-mk column-mk content-center" action="#">
+        <input id="search" type="search">
+        <div class="container-mk row-mk content-evenly">
+            <button class="btn-mk btn-color btn-create" onclick="axiosSearchTitle()">Titulo</button>
+            <button class="btn-mk btn-color btn-create" onclick="axiosSearchSubject()">Tema</button>
+        </div>
+    </form>
+    <div class="container-mk row-mk content-evenly">
+        <button class="btn-mk btn-color btn-create" onclick="axiosAll()">Todos</button>
+        <button class="btn-mk btn-color btn-create" onclick="axiosRandom()">Aleatorio</button>
+    </div>
+</div>
+<div id="tests" class="container-mk column-mk align-center content-center">
+</div>

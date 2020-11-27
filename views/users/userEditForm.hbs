@@ -1,0 +1,26 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/user">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+
+    </a>
+    <h1 class="text-center title">Modifica tu perfil de usuario</h1>
+</div>
+
+
+<div class="form">
+
+    <form class="container-mk column-mk content-center" action="/user/{{user._id}}/edit" method="POST">
+
+        <label for="name">Introduce tu nombre:</label>
+        <input type="text" name="name" id="name" placeholder="Nombre" autofocus value="{{user.name}}">
+        <label for="lastName">Introduce tu apellido:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Apellido" value="{{user.lastName}}">
+        <button class="btn-mk btn-color btn-create" type="submit">Modificar</button>
+
+    </form>
+
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+    {{/if}}
+
+</div>

@@ -1,0 +1,22 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/admin">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center">Tests de Team to Learn</h1>
+</div>
+
+<div class="container-mk row-mk align-center content-center wrap">
+    {{#each tests}}
+        <div class="container-mk column-mk card">
+            <a href="/admin/test/{{_id}}">
+                <h4 class="text-center">Título: {{title}}</h4>
+                <p class="text-center">Tema: {{subject}}</p>
+                <p class="text-center">Res. mínimas: {{numValid}}</p>
+                <p class="text-center">Veces realizado: {{done}}</p>
+                <p class="text-center">Veces superado: {{passed}}</p>
+            </a>
+
+        </div>
+    {{/each}}
+</div>
+

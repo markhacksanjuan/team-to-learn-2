@@ -1,0 +1,23 @@
+<h1 class="text-center">Ranking</h1>
+<div class="container-mk column-mk content-center align-center">
+    <div class="text-center container-mk row-mk content-evenly ranking bold">
+        <p>
+        </p>
+        <p>Nombre</p>
+        <p>Tests pasados</p>
+        <p>Tests intentados</p>
+
+    </div>
+    {{#each users}}
+    <div class="text-center container-mk row-mk content-evenly align-center ranking ranking-border">
+        <p >
+            <img class="user-logo" src="{{imgPath}}" alt="{{this.imgName}}">
+        </p>
+        <p>{{name}} {{lastName}}</p>
+        <p>{{testsPassed.length}}</p>
+        <p>{{testsDone.length}}</p>
+
+    </div>
+    {{/each}}
+
+</div>

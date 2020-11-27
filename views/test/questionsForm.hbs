@@ -1,0 +1,41 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/test/{{id}}">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center title">Preguntas</h1>
+</div>
+
+<div class="form form-sm">
+    <form class="container-mk column-mk content-center form-sm" action="/test/{{id}}/question" method="POST">
+        <div class="container-mk column-mk content-center">
+            <label for="question">Pregunta:</label>
+            <input type="text" name="question" autofocus>
+        </div>
+
+        <div class="container-mk column-mk content-center">
+            <label for="validAnswers">Respuesta válida:</label>
+            <input type="text" name="validAnswers">
+            <div id="valids"></div>
+        </div>
+
+        <div id="wrongs" class="container-mk column-mk content-center">
+            <label for="wrongAnswers">Respuesta incorrecta:</label>
+            <input type="text" name="wrongAnswers">
+        </div>
+
+        <div class="container-mk column-mk content-center align-center">
+        <button id="add-wrong-answer" class="add-question container row align-center content-center" onclick="addWrongQuestion()">
+            <div class="container row content-start align-center">
+                <img class="add-sign-question" src="/images/add-sign-5.png" alt="add-sign">
+                <span id="new-valid">Nueva respuesta</span>
+            </div>
+        </button>
+        </div>
+
+        <button class="btn-mk btn-color btn-create" type="submit">Crear Pregunta</button>
+        {{#if errorMessage}}
+            <p class="error">{{errorMessage}}</p>
+        {{/if}}
+    </form>
+
+</div>

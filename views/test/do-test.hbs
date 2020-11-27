@@ -1,0 +1,73 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/all">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <div class="container-mk column-mk content-center">
+      <h1 class="text-center">Test: {{test.title}}</h1>
+      <h3 class="block text-center">{{test.subject}}</h3>
+
+    </div>
+</div>
+
+
+
+<!-- Button trigger modal -->
+<div class="container-mk row-mk content-center">
+  <button type="button" class="btn-mk btn-color btn-create" data-toggle="modal" data-target="#emailModal">
+    Compartir
+  </button>
+</div>
+
+<form action="/test/do/{{test._id}}" method="POST">
+    <div id="questions" class="container-mk column-mk align-center content-center">
+      {{#each newAnswers as | newAnsers i |}}
+          <div class="container-mk column-mk card-questions">
+              <h4 class="text-justify">{{question}}</h4>
+              {{#each answers}}
+                  <div class="container-mk row-mk align-center answer">
+                      <input type="radio" id="answers{{i}}{{@index}}" name="answers{{i}}" value="{{this}}">
+                      <label class="pointer" for="answers{{i}}{{@index}}">{{this}}</label>
+                  </div>
+              {{/each}}
+          </div>
+      {{/each}}
+        {{#if test.questions}}
+          <button class="btn-mk btn-color btn-create" type="submit">Check!</button>
+        {{else}}
+          <p>Parece que el test no contiene preguntas...</p>
+        {{/if}}
+    </div>
+</form>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="emailModalLabel">Compartir test de <strong>{{test.title}}</strong> </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form id="send-email" action="/test/{{test._id}}/send" method="POST">
+          <label for="toName">Introduce el nombre: </label>
+          <input type="text" name="toName" id="toName">
+          <label for="toEmail">Introduce e-mail: </label>
+          <input type="text" name="toEmail" id="toEmail">
+        
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-mk btn-cancel" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn-mk btn-color btn-create" form="send-email">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+

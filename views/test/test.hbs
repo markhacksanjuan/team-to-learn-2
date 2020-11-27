@@ -1,0 +1,56 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/dashboard/test/all">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center title">Test: {{test.title}}</h1>
+</div>
+
+<h3 class="text-center">{{test.subject}}</h3>
+
+<div id="btns" class="container-mk row-mk content-center align-center">
+    <button id="btn-edit-test" class="add-question container-mk row-mk align-center content-center edit">
+        <a href="/test/{{test.id}}/edit">
+            <div id="edit-test" class="container-mk row-mk content-start align-center">
+                <img class="add-sign-question" src="/images/edit-sign.jpg" alt="edit-sign">
+                <span id="new-valid">Editar test</span>
+            </div>
+        </a>
+    </button>
+    <button id="btn-add-answer" class="add-question container-mk row-mk align-center content-center edit">
+        <a href="/test/{{test.id}}/question">
+        <div id="new-question" class="container-mk row-mk content-start align-center">
+            <img  class="add-sign-question" src="/images/add-sign-5.png" alt="add-sign">
+            <span id="new-valid">Nueva pregunta</span>
+        </div>
+        </a>
+    </button>
+
+</div>
+
+
+
+<div class="container-mk column-mk align-center">
+{{#each test.questions}}
+    <div class="container-mk column-mk card">
+        <h3 class="text-center">{{question}}</h3>
+        {{#each validAnswers}}
+            <div class="container-mk row-mk answer">
+                <p class="valid">{{this}}</p>
+            </div>
+        {{/each}}
+        {{#each wrongAnswers}}
+            <div class="container-mk row-mk answer">
+                 <p class="wrong">{{this}}</p>
+            </div>
+        {{/each}}
+        <a href="/question/{{_id}}/delete">
+            <img class="trash-sign-question trash rotate45" src="/images/trash-sign.jpg" alt="trash-sign">
+        </a>
+        <a href="/question/{{_id}}/edit">
+            <img class="edit-sign-question rotate" src="/images/edit-sign.jpg" alt="edit-sign">
+        </a>
+    </div>
+{{/each}}
+</div>
+
+

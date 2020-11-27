@@ -1,0 +1,21 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/admin">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center">Usuarios de Team to Learn</h1>
+</div>
+
+<div class="container-mk row-mk align-center content-center wrap">
+    {{#each users}}
+        <div class="container-mk column-mk card">
+            <a href="/admin/user/{{_id}}">
+                <h4 class="text-center">{{name}} {{lastName}}</h4>
+                <p class="text-center">{{email}}</p>
+                <p class="text-center">{{role}}</p>
+                <p class="text-center">Verificado: <strong>{{isVerified}}</strong></p>
+            </a>
+
+        </div>
+    {{/each}}
+</div>
+

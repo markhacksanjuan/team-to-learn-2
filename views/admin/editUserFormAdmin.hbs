@@ -1,0 +1,37 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/admin/user">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+
+    </a>
+    <h1 class="text-center title">Modifica usuario</h1>
+</div>
+
+
+<div class="form">
+
+    <form class="container-mk column-mk content-center" action="/admin/user/{{userFound._id}}" method="POST">
+
+        <label for="name">Nuevo nombre:</label>
+        <input type="text" name="name" id="name" placeholder="Nombre" value="{{userFound.name}}">
+        <label for="lastName">Nuevo apellido:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Apellido" value="{{userFound.lastName}}">
+        <label for="role">Modificar Rol: <strong>{{userFound.role}}</strong></label>
+        <select name="role" id="role" value="">
+            <option value="GUEST">GUEST</option>
+            <option value="ADMIN">ADMIN</option>
+        </select>
+        <label for="isVerified">Modificar verificación: <strong>{{userFound.isVerified}}</strong></label>
+        <select name="isVerified" id="isVerified" selected="">
+            <option value="true">true</option>
+            <option value="false">false</option>
+        </select>
+        <button class="btn-mk btn-color btn-create" type="submit">Modificar</button>
+        <a href="/admin/user/{{userFound._id}}/delete">Eliminar usuario</a>
+
+    </form>
+
+    {{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+    {{/if}}
+
+</div>

@@ -1,0 +1,27 @@
+<div class="container-mk row-mk content-center align-center">
+    <h2 class="text-center">Estás viendo tu perfil, {{user.name}}. ¿Quieres cambiar algo?</h2>
+</div>
+
+
+
+
+
+<div class="container-mk row-mk wrap content-center">
+    <div class="container-mk column-mk align-center">
+        <img class="user-img" src="{{user.imgPath}}" alt="{{user.name}}-image">
+        <a class="block" href="/user/{{user._id}}/edit/avatar">Cambiar foto</a>
+
+    </div>
+    <div>
+        <p>Nombre: {{user.name}}</p>
+        <p>Apellido: {{user.lastName}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Tests creados por mí: {{tests.length}}</p>
+        <p>Tests realizados: {{user.testsDone.length}}</p>
+        <p>Tests aprobados: {{user.testsPassed.length}}</p>
+        <a href="/user/{{user._id}}/edit">Modificar información</a>
+    </div>
+
+</div>
+
+

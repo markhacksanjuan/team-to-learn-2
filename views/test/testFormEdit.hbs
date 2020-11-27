@@ -1,0 +1,24 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/test/{{test._id}}">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center title">Editar Test</h1>
+</div>
+<div class="form">
+    <form class="container-mk column-mk content-center" action="/test/{{test._id}}/edit" method="POST">
+        <label for="title">Título del test</label>
+        <input type="text" name="title" autofocus value="{{test.title}}">
+        <label for="subject">Temario del test</label>
+        <input type="text" name="subject" value="{{test.subject}}">
+        <label for="numValid">Número de respuestas válidas</label>
+        <input type="text" name="numValid" value="{{test.numValid}}">
+
+        {{#if errorMessage}}
+            <p class="error">{{errorMessage}}</p>
+        {{/if}}
+
+        <button class="btn-mk btn-color btn-create" type="submit">Editar test!</button>
+        <a href="/test/{{test._id}}/delete">Eliminar test</a>
+
+    </form>
+</div>

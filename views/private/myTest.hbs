@@ -1,0 +1,17 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/dashboard">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center title">Mis Tests</h1>
+</div>
+
+<div class="container-mk column-mk align-center">
+    {{#each tests}}
+        <div class="container-mk column-mk card shadow">
+            <a href="/test/{{_id}}">
+                <h3 class="text-center">{{title}}</h3>
+                <p class="text-center">Temario: {{subject}}</p>
+            </a>
+        </div>
+    {{/each}}
+</div>

@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+body {
+    font-family: 'Mulish', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+nav {
+    padding: .3rem 1rem;
+    background-color: rgb(228, 228, 228);
+    border-bottom: 1px solid rgb(200, 200, 200);
+    box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.50);
+}
+ul {
+    list-style: none;
+}
+h1 {
+    margin: 3% 0 4% 0;
+}
+h2 {
+    margin: 3% 0 4% 5%;
+}
+a {
+    text-decoration: none;
+    color:rgb(112, 157, 41);
+}
+a:hover{
+    text-decoration: none;
+}
+input {
+    height: 1.9rem;
+    margin: .3rem 0 1rem 0;
+}
+nav a {
+    margin-right: 1.3rem;
+    color: rgb(0, 0, 0)
+}
+nav a:hover {
+    color: rgb(104, 206, 56)
+}
+footer {
+    background-color: rgb(77, 77, 77) ;
+    color: white;
+    margin: 15% 0 0 0;
+    height: 2.5rem;
+    padding: 1.2rem 0 0 0;
+}
+footer p{
+    font-size: .6rem;
+}
+.block {
+    display: block;
+}
+.container-mk {
+    display: flex;
+}
+.row-mk {
+    flex-direction: row;
+}
+.column-mk {
+    flex-direction: column;
+}
+.content-start {
+    justify-content: flex-start;
+}
+.content-between {
+    justify-content: space-between;
+}
+.content-center {
+    justify-content: center;
+}
+.content-evenly{
+    justify-content: space-evenly;
+}
+.align-center{
+    align-items: center;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+.add-question {
+    background-color: white;
+    border: 1px dotted rgb(228, 228, 228);
+    border-radius: .2rem;
+}
+.add-sign{
+    width: 50px;
+    height: 50px;
+}
+.add-sign-question{
+    width: 20px;
+    height: 20px;
+    margin: .5rem 1rem .5rem 0;
+}
+.answer {
+    margin: 0 0 1rem 0;
+    padding: 0 2% 0 5%;
+}
+.answer input {
+    margin: 0 1rem 0 0;
+}
+.bold{
+    font-weight: bold;
+}
+.btn-mk {
+    border: none;
+    height: 2rem;
+}
+.btn-color {
+    background-color: rgb(166, 228, 65);
+}
+.btn-color:hover {
+    background-color: rgb(157, 212, 69);
+    box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);
+}
+.btn-create {
+    border-radius: .2rem;
+    margin: 1rem .5rem 0 .5rem;
+}
+.btn-cancel {
+    background-color: rgb(160, 160, 160);
+    color: white;
+    border-radius: .2rem;
+    margin: 1rem .5rem 0 .5rem;
+}
+.btn-cancel:hover {
+    background-color: rgb(102, 102, 102);
+}
+.btn-login {
+    width: 7rem;
+    padding: .2rem 0 .1rem 0;
+    border-radius: 1.3rem;
+    color: rgb(102, 102, 102);
+}
+.btn-login:hover {
+    transform: scale(1.1);
+    color: rgb(102, 102, 102);
+    background-color: rgb(157, 212, 69);
+}
+.btn-again{
+    width: 10rem;
+    margin-top: 1rem;
+}
+
+.edit-sign-question {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+
+}
+.minus-sign {
+    width: 20px;
+    height: 20px;
+}
+.new-answer{
+    width: 150%;
+}
+.rotate{
+    transform: rotate(0);
+    transition: transform .8s ease-in-out;
+}
+.rotate:hover {
+    transform: rotate(90deg)
+}
+.rotate45{
+    transition: transform .8s ease-in-out;
+}
+.rotate45:hover {
+    transform: rotate(45deg)
+}
+
+.shadow {
+    box-shadow: 0px 0px 40px -17px rgba(0,0,0,0.75);
+}
+.shadow:hover{
+    box-shadow: 0px 0px 50px -17px rgba(0,0,0,0.75);
+    transform: scale(1.008)
+}
+.card-folder {
+    width: 75%;
+    border: 1px solid rgb(166, 228, 65);
+    margin: 1rem auto;
+    padding: .6rem 0 0 0;
+    border-radius: .5rem;
+}
+.card-add p {
+    margin:.2rem 0 .2rem 0;
+}
+.card, .card-questions {
+    width: 75%;
+    border: 1px solid rgb(166, 228, 65);
+    border-radius: .3rem;
+    margin: 1rem 0 0 0;
+    padding: .3rem 1%;
+}
+
+.card h3, .card h4, .card p{
+    margin: 0;
+}
+.card h4, .card-questions h4{
+    padding: 0 6%;
+    margin: 0 0 3% 0;
+}
+.card-questions h3, .card-questions p{
+    margin: 0;
+}
+.arrow {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;
+}
+.title {
+    margin: .6rem 0 .5rem 0;
+}
+.logo {
+    height: .8rem;
+    margin: 0 0 0 .4rem;
+}
+.ranking {
+    
+    width: 75%;
+}
+.ranking p {
+    width: 25%;
+    margin:1% 0 1% 0
+}
+.ranking-border {
+    border-bottom: 1px solid rgb(166,228,65);
+}
+.form {
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid rgb(166, 228, 65);
+    border-radius: .6rem;
+    padding: 2% 5% 3% 5%
+}
+
+.edit {
+    margin: 0 1rem 0 0;
+}
+.valid {
+    color: rgb(87, 211, 87)
+}
+.wrong {
+    color: rgb(208, 88, 88)
+}
+.error {
+    font-size: .8rem;
+    color:tomato;
+    margin: .5rem 0 0 0;
+}
+.pointer {
+    cursor: pointer;
+}
+.user-img{
+    height: 250px;
+    margin-right: 15%;
+    border-radius: 50%;
+}
+.user-logo{
+    height: 40px;
+    margin-right: 5%;
+    border-radius: 50%;
+}
+.trash{
+    width: 20px;
+    position: absolute;
+    right: 5%;
+    bottom: 30%;
+}
+#body {
+    margin: 8% 0 0 0;
+}
+#user-nav{
+    width: 50%;
+}
+#intro {
+    padding: 0 2rem;
+}
+#new-valid {
+    margin: 0 0 0 0
+}
+#select-test-1{
+    width: 100%;
+    margin: 0 0 1% 0;
+}
+#h1-search{
+    margin: 0 0 0 0;
+}
+#edit-test > img {
+    transform: rotate(0);
+    transition: transform .8s ease-in-out;
+}
+#edit-test:hover > img {
+    transform: rotate(90deg)
+}
+#new-question {
+    transition: transform .8s ease-in-out;
+}
+#new-question:hover > img {
+    transform: scale(1.1)
+}
+#result-title {
+    margin-bottom: 2%
+}
+#re-do {
+    width: 100%;
+    margin: 1% 0 0 0;
+}
+#re-do a{
+    margin: 2%;
+}
+#btn-login{
+    margin: 0 0 1.2% 0
+}
+/* --- MEDIA QUERY FOR IPHONE 5 --- */
+@media (max-width: 320px){
+    h1{
+        font-size: 2rem;
+        margin: 10% 0 0 0
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.3rem;
+    }
+    nav a {
+        margin-right: .6rem;
+    }
+    .auth {
+        display: none;
+    }
+    .form {
+        width: 70%;
+    }
+    .title {
+        margin-bottom: 1rem;
+    }
+    .add-sign-question {
+        margin: .5rem 0 .5rem 0;
+    }
+    .user-img{
+        height: 150px;
+        margin-right: 0;
+    }
+    #body{
+        margin: 23% 0 0 0;
+    }
+    #btns > button {
+        margin: 0 1%;        
+    }
+    #btns > button > a > div {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #user-nav{
+        width: 60%;
+    }
+    #re-do a{
+        margin: 2% 2%;
+    }
+
+}
+/* --- MEDIA QUERY FOR IPHONE X --- */
+
+@media (min-width: 321px) and (max-width: 414px){
+    nav a {
+        margin-right: .3rem;
+    }
+    .form {
+        width: 70%;
+    }
+    #body{
+        margin: 21% 0 0 0;
+    }
+
+}
+@media (min-width: 415px) and (max-width: 768px) {
+    .card{
+        width: 30%;
+        margin: 2% 1% 0 0;
+    }
+    #tests{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .card-questions {
+        width: 70%;
+    }
+    #body{
+        margin: 10% 0 0 0;
+    }
+
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card{
+        width: 30%;
+        margin: 2% 1% 0 0;
+    }
+    #tests{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    #body{
+        margin: 8% 0 0 0;
+    }
+    
+
+}
+@media (min-width: 1025px) {
+    .card{
+        width: 30%;
+        margin: 2% 1% 0 0;
+    }
+    #tests{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    
+}

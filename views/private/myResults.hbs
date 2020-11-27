@@ -1,0 +1,26 @@
+<div id="result-title" class="container-mk row-mk content-center align-center">
+    <a href="/dashboard">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center title">Mis Resultados</h1>
+</div>
+
+
+<div class="container-mk column-mk content-center align-center">
+    <div class="text-center container-mk row-mk content-evenly ranking bold">
+        <p>Título del test</p>
+        <p>Tema del test</p>
+        <p>Res. mínimas</p>
+        <p>Mi resultado</p>
+    </div>
+    {{#each results}}
+        <div class="text-center container-mk row-mk content-evenly align-center ranking ranking-border">
+            <p>{{testId.title}}</p>
+            <p><a class="block" href="/test/do/{{testId._id}}">{{testId.subject}}</a></p>
+            <p>{{testId.numValid}}</p>
+            <p>{{hits}}</p>
+
+        </div>
+    {{/each}}
+
+</div>

@@ -1,0 +1,23 @@
+<h1 class="text-center">Regístrate</h1>
+<div class="form">
+
+    <form class="container-mk column-mk content-center" action="/auth/signup" method="POST">
+
+        <label for="name">Introduce tu nombre:</label>
+        <input type="text" name="name" id="name" placeholder="Nombre" {{#unless newUser}} autofocus {{/unless}} value="{{newUser.name}}">
+        <label for="lastName">Introduce tu apellido:</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Apellido" value="{{newUser.lastName}}">
+        <label for="email">Introduce tu e-mail:</label>
+        <input type="text" name="email" id="email" placeholder="email" value="{{newUser.email}}">
+        <label for="password">Introduce tu contraseña:</label>
+        <input type="password" name="password" id="password">
+
+        <button class="btn-mk btn-color btn-create" type="submit">Regístrate</button>
+
+    </form>
+
+    {{#if errorMessage}}
+        <p class="error">{{errorMessage}}</p>
+    {{/if}}
+
+</div>

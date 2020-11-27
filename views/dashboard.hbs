@@ -1,0 +1,37 @@
+<h1 class="text-center">¡Hola {{user.name}}!</h1>
+<h3 class="text-center">¿Qué quieres hacer?</h3>
+
+<div class="container-mk column-mk content-center card-folder shadow">
+    <a class="text-center" href="/test/new">
+        <img class="add-sign" src="/images/add-sign-2.png" alt="add-sign">
+        <p>Crea un nuevo test</p>
+    </a>
+</div>
+<div class="container-mk column-mk content-center card-folder shadow">
+    <a class="text-center" href="/dashboard/test/all">
+        <img class="add-sign" src="/images/folder-sign-2.png" alt="add-sign">
+        <p>Ver tus tests</p>
+    </a>
+</div>
+<div class="container-mk column-mk content-center card-folder shadow">
+    <a class="text-center" href="/all">
+        <img class="add-sign" src="/images/test-sign.png" alt="test-sign">
+        <p>Realizar test</p>
+    </a>
+</div>
+<div class="container-mk column-mk content-center card-folder shadow">
+    <a class="text-center" href="/dashboard/results">
+        <img class="add-sign" src="/images/chart-icon.png" alt="chart-sign">
+        <p>Ver tus resultados</p>
+    </a>
+</div>
+
+{{#if ADMIN}}
+<div class="container-mk column-mk content-center card-folder shadow">
+    <a id="edit-test" class="text-center" href="/admin">
+        <img class="add-sign" src="/images/edit-sign.jpg" alt="edit-sign">
+        <p>Administrar página</p>
+    </a>
+</div>
+{{/if}}
+

@@ -1,0 +1,17 @@
+<div class="container-mk row-mk content-center align-center">
+    <a href="/user">
+        <img class="arrow" src="/images/arrow-left.png" alt="arrow-left">
+    </a>
+    <h1 class="text-center title">Modifica tu avatar</h1>
+</div>
+<div class="form">
+    <form class="container-mk column-mk content-center" action="/user/{{user._id}}/edit/avatar" method="POST" enctype="multipart/form-data">
+        <label for="name">Avatar:</label>
+        <input type="file" name="avatar" id="avatar">
+        {{!-- <button class="btn-mk btn-color btn-create" type="submit">Enviar</button> --}}
+        <input class="btn-mk btn-color btn-create" type="submit" value="save">
+    </form>
+    {{#if errorMessage}}
+        <p class="error">{{errorMessage}}</p>
+    {{/if}}
+</div>

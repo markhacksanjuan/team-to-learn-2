@@ -1,0 +1,18 @@
+<h1 class="text-center">Test realizado: {{test.title}}</h1>
+<h3 class="text-center">Temario: {{test.subject}}</h3>
+
+<div class="container-mk column-mk align-center">
+    <div class="container-mk column-mk card">
+        <p>Preguntas acertadas: {{result}}</p>
+        <p>Preguntas totales: {{total}}</p>
+        <p>Aciertos mínimos para pasar el test: {{test.numValid}}</p>
+    </div>
+    <div id="re-do" class="container-mk row-mk content-center wrap">
+        <a  class="block btn-mk btn-color btn-login btn-again container-mk row-mk content-center" href="/all"><strong>Nuevo test</strong></a>
+        <a  class="block btn-mk btn-color btn-login btn-again container-mk row-mk content-center" href="/test/do/{{test._id}}"><strong>Volver a intentar</strong></a>
+    </div>
+
+</div>
+
+
+
